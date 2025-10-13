@@ -1,0 +1,12 @@
+name: AI Super Agent
+on: [push, issue_comment]
+jobs:
+  ai-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run AI Bot
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: node bot.js
