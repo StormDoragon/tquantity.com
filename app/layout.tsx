@@ -34,3 +34,4 @@ export default function RootLayout({
     </html>
   );
 }
+import './globals.css' // Remove any pp reference
